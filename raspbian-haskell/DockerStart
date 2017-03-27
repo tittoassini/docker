@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# Run sshd in non-daemon mode
+/usr/sbin/sshd -D
+
+
+
+
+
