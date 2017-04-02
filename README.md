@@ -2,7 +2,7 @@
 
 ## raspbian-haskell: an Arm7 haskell testing environment
 
-quid2/raspbian-haskell is a linux/Arm7 haskell testing environment deployed as a docker image.
+`quid2/raspbian-haskell` is a linux/Arm7 haskell testing environment deployed as a docker image.
 
 It's handy to test haskell code, and in particular low-level code that interacts directly with memory or other platform specific details, in an environment that is quite different from the standard X86 platform.
 
@@ -20,22 +20,26 @@ You will probably want to run it as an sshd accessible server.
 To do so:
 
 - clone this repository:
-  git clone https://github.com/tittoassini/docker
+ 
+  `git clone https://github.com/tittoassini/docker`
 
-- copy your public key to docker/raspbian-haskell/root/.ssh/authorized_keys
+- copy your public key to `docker/raspbian-haskell/root/.ssh/authorized_keys`
 
 - build your ssh accessible server:
-  cd docker/raspbian-haskell
-  docker build -t raspbian-haskell .
+
+  `cd docker/raspbian-haskell;docker build -t raspbian-haskell .`
 
 - run the server:
-  docker run -d -p=2222:22 -t raspbian-haskell
+
+  `docker run -d -p=2222:22 -t raspbian-haskell`
 
 - connect to the running server:
-  ssh root@<host> -p 2222
+
+  `ssh root@<host> -p 2222`
   
 To stop the server:
-docker stop <image-id>
+
+  `docker stop <image-id>`
 
 ### Issues 
 
@@ -45,7 +49,7 @@ Large image, about 8G.
 
 ### Building the image
 
-To see the steps followed to build the docker image, check the [image docker file](DockerfileImage).
+To see the steps followed to build the docker image, check the [image docker file](raspbian-haskell/DockerfileImage).
 
 However, trying to build the image using the docker file failed due to an error during the configuration of the ghc compiler, so the image was actually built by entering the commands manually.
 
