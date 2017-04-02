@@ -2,7 +2,7 @@
 
 ## raspbian-haskell: an Arm7 haskell testing environment
 
-`quid2/raspbian-haskell` is a linux/Arm7 haskell testing environment deployed as a docker image.
+[quid2/raspbian-haskell](https://hub.docker.com/r/quid2/raspbian-haskell/) is a linux/Arm7 haskell testing environment deployed as a docker image.
 
 It's handy to test haskell code, and in particular low-level code that interacts directly with memory or other platform specific details, in an environment that is quite different from the standard X86 platform.
 
