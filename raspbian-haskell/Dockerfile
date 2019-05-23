@@ -1,6 +1,6 @@
 # Raspbian (arm7) + haskell ssh accessible server
 
-FROM      quid2/raspbian-haskell
+FROM quid2/raspbian-haskell
 
 # sshd port
 EXPOSE 22
