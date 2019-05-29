@@ -9,7 +9,8 @@ RUN cd flat;stack test --dependencies-only --resolver $STK
 RUN rm -rf flat
 
 RUN apt-get install -y libtinfo-dev
-RUN git clone https://github.com/Quid2/model
+
+RUN git  clone https://github.com/Quid2/model
 RUN cd model;stack test --dependencies-only --resolver $STK
 RUN rm -rf model
 
