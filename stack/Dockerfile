@@ -5,7 +5,7 @@ MAINTAINER Titto Assini <tittoassini@gmail.com>
 RUN echo "北京市"
 
 # make sure the package repository is up to date
-# RUN apt-get update;apt-get -y upgrade
+RUN apt-get update;apt-get -y upgrade
 
 # # Set the locale
 RUN apt-get install -y locales;locale-gen en_US.UTF-8  
