@@ -20,6 +20,8 @@ RUN pwd
 
 RUN /root/.cabal/bin/cabal --version
 
+RUN echo $PATH
+
 # RUN git clone https://github.com/Quid2/zm
 # RUN cd zm;cabal sandbox init;cabal install --only-dependencies --enable-tests
 #RUN cd zm;cabal test
