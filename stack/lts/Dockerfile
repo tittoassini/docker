@@ -29,6 +29,9 @@ RUN cd zm;stack test --dependencies-only --resolver $STK
 
 RUN cd zm;stack test
 
+RUN apt-get install -y libtinfo-dev
+
+RUN cd zm;stack test
 
 
 #RUN rm -rf zm
