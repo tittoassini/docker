@@ -27,3 +27,5 @@ RUN cabal v2-update
 RUN git clone https://github.com/Quid2/zm
 RUN cd zm;cabal v2-configure -w ghc-$GHCVER;cabal v2-build --only-dependencies --enable-tests
 RUN rm -rf zm
+
+#RUN cabal v2-build --only-dependencies --enable-tests;cabal v2-build;cabal v2-test
