@@ -4,17 +4,9 @@ MAINTAINER Titto Assini <tittoassini@gmail.com>
 
 ARG STK
 
-# # Set the locale
-# RUN apt-get install -y locales;locale-gen en_US.UTF-8  
-# ENV LANG en_US.UTF-8  
-# ENV LANGUAGE en_US:en  
-# ENV LC_ALL en_US.UTF-8
-
 # RUN git clone https://github.com/Quid2/flat
 # RUN cd flat;stack test --dependencies-only --resolver $STK
 # RUN rm -rf flat
-
-# RUN apt-get install -y libtinfo-dev
 
 # RUN git clone https://github.com/Quid2/model
 # RUN cd model;stack test --dependencies-only --resolver $STK
@@ -22,16 +14,5 @@ ARG STK
 
 RUN git clone https://github.com/Quid2/zm
 RUN cd zm;stack test --dependencies-only --resolver $STK
-
-# ENV LC_ALL=en_US.UTF-8
-# ENV LANG=en_US.UTF-8
-# ENV LANGUAGE=en_US.UTF-8
-
-RUN cd zm;stack test
-
-#RUN apt-get install -y libtinfo-dev
-
 #RUN cd zm;stack test
-
-
-#RUN rm -rf zm
+RUN rm -rf zm
