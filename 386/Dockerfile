@@ -24,14 +24,18 @@ RUN cabal --version
 
 RUN echo $PATH
 
-RUN apt-get remove -y ghc
+RUN add-apt-repository -y ppa:hvr/ghc
+RUN apt-get update
+RUN apt-get install ghc-8.4.4
 
-RUN apt-cache search ghc compiler
+#RUN apt-get remove -y ghc
 
-RUN apt-get install -y ghc-8.4.4
+#RUN apt-cache search ghc compiler
+
+#RUN apt-get install -y ghc-8.4.4
 
 RUN git clone https://github.com/Quid2/flat
-RUN cd flat;cabal v2-configure -w ghc-8.4.4;cabal v2-build --only-dependencies
+# RUN cd flat;cabal v2-configure -w ghc-8.4.4;cabal v2-build --only-dependencies
 
 
 #RUN cd flat;cabal sandbox init;cabal install --only-dependencies --enable-tests
