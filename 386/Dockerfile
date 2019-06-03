@@ -13,9 +13,9 @@ ENV LC_ALL en_US.UTF-8
 
 RUN apt-get install -y curl libtinfo-dev git ghc cabal-install
 
-RUN cabal update
+#RUN cabal update
 
 RUN git clone https://github.com/Quid2/zm
-RUN cd zm;cabal install --only-dependencies --enable-tests
-RUN cd zm;cabal test
-RUN rm -rf zm
+RUN cd zm;cabal sandbox init;cabal install --only-dependencies --enable-tests
+#RUN cd zm;cabal test
+#RUN rm -rf zm
