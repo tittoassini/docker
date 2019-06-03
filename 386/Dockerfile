@@ -24,6 +24,7 @@ RUN cabal --version
 
 RUN echo $PATH
 
+RUN apt-get install software-properties-common
 RUN add-apt-repository -y ppa:hvr/ghc
 RUN apt-get update
 RUN apt-get install ghc-8.4.4
@@ -34,7 +35,7 @@ RUN apt-get install ghc-8.4.4
 
 #RUN apt-get install -y ghc-8.4.4
 
-RUN git clone https://github.com/Quid2/flat
+#RUN git clone https://github.com/Quid2/flat
 # RUN cd flat;cabal v2-configure -w ghc-8.4.4;cabal v2-build --only-dependencies
 
 
