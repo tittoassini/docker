@@ -35,6 +35,8 @@ RUN apt-get -y install ghc-8.4.4
 
 #RUN apt-get install -y ghc-8.4.4
 
+ENV PATH=$PATH:/opt/ghc/bin
+
 RUN git clone https://github.com/Quid2/flat
 RUN cd flat;cabal v2-configure -w ghc-8.4.4;cabal v2-build --only-dependencies
 
