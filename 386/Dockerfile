@@ -12,30 +12,16 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 ENV PATH=/root/.cabal/bin:$PATH
 
-RUN apt-get install -y curl libtinfo-dev git ghc cabal-install libz-dev
+ENV CABALVER=2.4.1.0
+ENV GHCVER=8.4.4
+ENV PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
 
-RUN cabal update;cabal --version;cabal install Cabal cabal-install;cabal --version;
+RUN apt-get install -y curl libtinfo-dev git software-properties-common libz-dev
+RUN add-apt-repository -y ppa:hvr/ghc;apt-get update
 
-RUN pwd
+RUN apt-get -y install cabal-install-$CABALVER ghc-$GHCVER 
 
-# RUN /root/.cabal/bin/cabal --version
-
-RUN cabal --version
-
-RUN echo $PATH
-
-RUN apt-get -y install software-properties-common
-RUN add-apt-repository -y ppa:hvr/ghc
-RUN apt-get update
-RUN apt-get -y install ghc-8.4.4
-
-#RUN apt-get remove -y ghc
-
-#RUN apt-cache search ghc compiler
-
-#RUN apt-get install -y ghc-8.4.4
-
-ENV PATH=$PATH:/opt/ghc/bin
+#ENV PATH=$PATH:/opt/ghc/bin
 
 RUN cabal v2-update
 
@@ -45,3 +31,4 @@ RUN cd flat;cabal v2-build --enable-tests
 #RUN cd flat;cabal sandbox init;cabal install --only-dependencies --enable-tests
 #RUN cd flat;cabal test
 #RUN rm -rf flat
+# RUN cabal update;cabal --version;cabal install Cabal cabal-install;cabal --version;
