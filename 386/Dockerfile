@@ -26,6 +26,8 @@ RUN echo $PATH
 
 RUN apt-get remove -y ghc
 
+RUN apt-get list ghc
+
 RUN apt-get install -y ghc-8.4.4
 
 RUN git clone https://github.com/Quid2/flat
