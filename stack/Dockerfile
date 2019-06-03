@@ -1,4 +1,4 @@
-# Build with: docker build -t quid2/stack .
+# Build with: ./mk
 FROM ubuntu:cosmic
 MAINTAINER Titto Assini <tittoassini@gmail.com>
 
