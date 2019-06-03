@@ -22,19 +22,8 @@ RUN add-apt-repository -y ppa:hvr/ghc;apt-get update
 
 RUN apt-get -y install cabal-install-$CABALVER ghc-$GHCVER 
 
-#ENV PATH=$PATH:/opt/ghc/bin
-
 RUN cabal v2-update
 
-RUN git clone https://github.com/Quid2/flat
-RUN cd flat;cabal v2-configure -w ghc-8.4.4;cabal v2-build --only-dependencies
-RUN cd flat;cabal v2-build --enable-tests
-RUN cd flat;cabal v2-test
-#RUN cd flat;cabal sandbox init;cabal install --only-dependencies --enable-tests
-#RUN cd flat;cabal test
-#RUN rm -rf flat
-# RUN cabal update;cabal --version;cabal install Cabal cabal-install;cabal --version;
 RUN git clone https://github.com/Quid2/zm
-RUN cd zm;cabal v2-configure -w ghc-8.4.4;cabal v2-build --only-dependencies
-RUN cd zm;cabal v2-build --enable-tests
-RUN cd zm;cabal v2-test
+RUN cd zm;cabal v2-configure -w ghc-$GHCVER;cabal v2-build --only-dependencies --enable-tests
+RUN rm -rf zm
