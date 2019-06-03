@@ -11,7 +11,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8
 
-RUN apt-get install -y curl libtinfo-dev git ghc cabal-install zlib-dev
+RUN apt-get install -y curl libtinfo-dev git ghc cabal-install libz-dev
 
 RUN cabal update;cabal --version;cabal install Cabal cabal-install;cabal --version;
 
