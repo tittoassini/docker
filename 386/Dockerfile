@@ -24,10 +24,10 @@ RUN cabal --version
 
 RUN echo $PATH
 
-RUN apt-get install software-properties-common
+RUN apt-get -y install software-properties-common
 RUN add-apt-repository -y ppa:hvr/ghc
 RUN apt-get update
-RUN apt-get install ghc-8.4.4
+RUN apt-get -y install ghc-8.4.4
 
 #RUN apt-get remove -y ghc
 
