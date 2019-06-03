@@ -26,7 +26,7 @@ RUN echo $PATH
 
 RUN apt-get remove -y ghc
 
-RUN apt-cache search ghc
+RUN apt-cache search ghc compiler
 
 RUN apt-get install -y ghc-8.4.4
 
