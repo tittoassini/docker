@@ -18,7 +18,7 @@ RUN cabal update;cabal --version;cabal install Cabal cabal-install;cabal --versi
 
 RUN pwd
 
-RUN ls /root/.cabal/bin
+RUN /root/.cabal/bin/cabal --version
 
 # RUN git clone https://github.com/Quid2/zm
 # RUN cd zm;cabal sandbox init;cabal install --only-dependencies --enable-tests
