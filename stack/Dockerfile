@@ -18,7 +18,7 @@ ENV LC_ALL en_US.UTF-8
 #RUN echo "export PATH=$PATH:/root/.local/bin" >> /root/.profile
 #RUN export PATH=$PATH:/root/.local/bin
 
-ENV PATH=$PATH:/root/.local/bin
+ENV PATH=/root/.local/bin:$PATH
 
 #RUN cat /root/.profile
 

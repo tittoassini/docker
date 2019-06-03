@@ -24,7 +24,14 @@ RUN cabal --version
 
 RUN echo $PATH
 
-# RUN git clone https://github.com/Quid2/zm
-# RUN cd zm;cabal sandbox init;cabal install --only-dependencies --enable-tests
-#RUN cd zm;cabal test
-#RUN rm -rf zm
+RUN apt-get remove -y ghc
+
+RUN apt-get install -y ghc-8.4.4
+
+RUN git clone https://github.com/Quid2/flat
+RUN cd flat;cabal v2-configure -w ghc-8.4.4;cabal v2-build --only-dependencies
+
+
+#RUN cd flat;cabal sandbox init;cabal install --only-dependencies --enable-tests
+#RUN cd flat;cabal test
+#RUN rm -rf flat
