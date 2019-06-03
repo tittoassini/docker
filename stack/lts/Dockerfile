@@ -17,11 +17,12 @@ RUN rm -rf model
 RUN git clone https://github.com/Quid2/zm
 RUN cd zm;stack test --dependencies-only --resolver $STK
 
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
+
 RUN cd zm;stack test
 
-#export LC_ALL=en_US.UTF-8
-#export LANG=en_US.UTF-8
-#export LANGUAGE=en_US.UTF-8
 
 
 #RUN rm -rf zm
