@@ -12,11 +12,12 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 ENV PATH=/root/.cabal/bin:$PATH
 
-ENV CABALVER=2.4.1.0
+RUN apt-get install -y curl libtinfo-dev git software-properties-common libz-dev
+
+ENV CABALVER=2.4
 ENV GHCVER=8.4.4
 ENV PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
 
-RUN apt-get install -y curl libtinfo-dev git software-properties-common libz-dev
 RUN add-apt-repository -y ppa:hvr/ghc;apt-get update
 
 RUN apt-get -y install cabal-install-$CABALVER ghc-$GHCVER 
