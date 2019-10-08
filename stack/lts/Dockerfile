@@ -14,8 +14,8 @@ RUN stack update
 
 RUN git clone https://github.com/Quid2/flat
 RUN cd flat;stack build --dependencies-only  --resolver $STK
-ARG CACHEBUST=3
-RUN cd flat;stack build --resolver $STK
+ARG CACHEBUST=5
+RUN cd flat;git pull;stack build --resolver $STK
 
 # RUN git clone https://github.com/Quid2/model
 # RUN cd model;stack test --dependencies-only --resolver $STK
