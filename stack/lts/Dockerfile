@@ -12,7 +12,7 @@ RUN stack upgrade
 
 RUN git clone https://github.com/Quid2/flat
 RUN cd flat;stack test --dependencies-only --resolver $STK
-RUN cd flat;stack build
+RUN cd flat;stack build --resolver $STK
 
 # RUN git clone https://github.com/Quid2/model
 # RUN cd model;stack test --dependencies-only --resolver $STK
