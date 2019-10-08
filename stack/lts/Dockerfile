@@ -6,9 +6,13 @@ ARG STK
 
 RUN stack setup --resolver $STK
 
+RUN stack update
+
+RUN stack upgrade
+
 RUN git clone https://github.com/Quid2/flat
 RUN cd flat;stack test --dependencies-only --resolver $STK
-RUN rm -rf flat
+RUN cd flat;stack build
 
 # RUN git clone https://github.com/Quid2/model
 # RUN cd model;stack test --dependencies-only --resolver $STK
