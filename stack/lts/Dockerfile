@@ -4,6 +4,8 @@ LABEL maintainer="tittoassini@gmail.com"
 
 ARG STK
 
+RUN stack setup --resolver $STK
+
 # RUN git clone https://github.com/Quid2/flat
 # RUN cd flat;stack test --dependencies-only --resolver $STK
 # RUN rm -rf flat
