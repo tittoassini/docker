@@ -12,7 +12,7 @@ RUN stack upgrade
 
 RUN stack update
 
-ARG CACHEBUST=1
+ARG CACHEBUST=2
 RUN git clone https://github.com/Quid2/flat
 RUN cd flat;stack build --dependencies-only  --resolver $STK
 RUN cd flat;stack build --resolver $STK
