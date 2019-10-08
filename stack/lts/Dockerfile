@@ -26,6 +26,7 @@ RUN cd zm;stack test --dependencies-only --resolver $STK
 RUN cd zm;stack test
 RUN rm -rf zm
 
-RUN git clone https://github.com/Quid2/top
-RUN cd top;stack build --dependencies-only --resolver $STK
-RUN rm -rf top
+# Won't yet work with ghc 8.8.X (failing dependenciy acid-state)
+# RUN git clone https://github.com/Quid2/top
+# RUN cd top;stack build --dependencies-only --resolver $STK
+# RUN rm -rf top
