@@ -14,6 +14,7 @@ ENV PATH=/root/.cabal/bin:$PATH
 
 RUN apt-get install -y curl libtinfo-dev git software-properties-common libz-dev
 
+# check https://github.com/haskell-CI/haskell-ci
 ENV CABALVER=2.4
 ENV GHCVER=8.4.4
 ENV PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH

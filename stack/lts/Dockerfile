@@ -15,5 +15,9 @@ ARG STK
 
 RUN git clone https://github.com/Quid2/zm
 RUN cd zm;stack test --dependencies-only --resolver $STK
-#RUN cd zm;stack test
+RUN cd zm;stack test
 RUN rm -rf zm
+
+RUN git clone https://github.com/Quid2/top
+RUN cd top;stack build --resolver $STK
+RUN rm -rf top
