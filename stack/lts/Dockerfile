@@ -1,6 +1,6 @@
 # Build with: ./mk lts-6.35
 FROM quid2/stack
-MAINTAINER Titto Assini <tittoassini@gmail.com>
+LABEL maintainer="tittoassini@gmail.com"
 
 ARG STK
 
@@ -19,5 +19,5 @@ RUN cd zm;stack test
 RUN rm -rf zm
 
 RUN git clone https://github.com/Quid2/top
-RUN cd top;stack build --resolver $STK
+RUN cd top;stack build --dependencies-only --resolver $STK
 RUN rm -rf top

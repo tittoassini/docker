@@ -1,6 +1,6 @@
 # ./mk
 FROM i386/ubuntu
-MAINTAINER Titto Assini <tittoassini@gmail.com>
+LABEL maintainer="tittoassini@gmail.com"
 
 # make sure the package repository is up to date
 RUN apt-get update;apt-get -y upgrade
