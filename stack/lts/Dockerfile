@@ -23,6 +23,7 @@ RUN stack update
 
 RUN git clone https://github.com/Quid2/zm
 RUN cd zm;stack test --dependencies-only --resolver $STK
+RUN cd zm;stack build
 RUN cd zm;stack test
 RUN rm -rf zm
 
