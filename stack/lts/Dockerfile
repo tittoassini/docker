@@ -23,8 +23,8 @@ RUN stack update
 
 RUN git clone https://github.com/Quid2/zm
 RUN cd zm;stack test --dependencies-only --resolver $STK
-RUN cd zm;stack build
-RUN cd zm;stack test
+RUN cd zm;stack build --resolver $STK
+RUN cd zm;stack test --resolver $STK
 RUN rm -rf zm
 
 # Won't yet work with ghc 8.8.X (failing dependenciy acid-state)
