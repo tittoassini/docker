@@ -1,4 +1,4 @@
 #!/bin/bash
-NAME=quid2/ghcjs
+NAME=quid2/ghcjs-8.4.0.1
 docker build -t $NAME .
 docker push $NAME
