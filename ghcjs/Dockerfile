@@ -1,6 +1,6 @@
 FROM agocorona/ghcjs
 
-RUN cabal new-update
+#RUN cabal new-update
 
 RUN git clone https://github.com/Quid2/flat
 
