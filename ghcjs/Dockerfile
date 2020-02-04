@@ -8,7 +8,7 @@ RUN cd flat;cabal --ghcjs new-build --dependencies-only
 
 RUN cd flat;cabal --ghcjs new-build
 
-RUN cabal --ghcjs new-test spec --dependencies-only 
+RUN cd flat;cabal --ghcjs new-test spec --dependencies-only 
 
 #RUN cabal --ghcjs new-test spec
 
