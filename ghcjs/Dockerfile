@@ -10,9 +10,12 @@ RUN cd flat;cabal --ghcjs new-build
 
 RUN cd flat;cabal --ghcjs new-test spec
 
-#ARG CACHEBUST=1 # increase to bust cache
+# increase to bust cache
+ARG CACHEBUST=1 
 
+# uncomment to update  
 #RUN cd flat;git pull;cabal --ghcjs new-test spec
 
+# check versions
 #RUN cabal --version;ghcjs --version
 
