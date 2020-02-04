@@ -1,4 +1,4 @@
 #!/bin/bash
-NAME=quid2/x64-ubuntu-ghcjs-$1
-docker build --build-arg STK=$1 --build-arg VER=$2 -t $NAME .
+NAME=quid2/ghcjs
+docker build -t $NAME .
 docker push $NAME
