@@ -10,6 +10,8 @@ RUN cd flat;cabal --ghcjs new-build
 
 RUN cd flat;git pull;cabal --ghcjs new-test spec
 
+RUN rm -r flat
+
 # increase to bust cache
 ARG CACHEBUST=1 
 
