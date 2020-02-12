@@ -1,0 +1,3 @@
+#!/bin/bash
+docker build -t quid2/eta .
+#docker push quid2/eta
