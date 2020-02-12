@@ -4,7 +4,7 @@
 git commit -am "fix";git push
 ssh root@mega.quid2.org 'cd docker;git pull'
 ssh root@mega.quid2.org 'df -h'
-ssh root@mega.quid2.org 'df -h;docker system prune;df -h'
+#ssh root@mega.quid2.org 'df -h;docker system prune;df -h'
 #ssh root@mega.quid2.org "cd docker/stack/lts;./mk $1"
 #ssh root@mega.quid2.org "cd docker/386;./mk"
 ssh root@mega.quid2.org "cd docker/eta;./mk"
