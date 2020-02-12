@@ -3,7 +3,7 @@ LABEL maintainer="tittoassini@gmail.com"
 
 RUN etlas update
 
-#RUN git clone https://github.com/Quid2/flat;cd flat;etlas build --enable-tests
+RUN git clone https://github.com/Quid2/flat;cd flat;etlas build --enable-tests
 
 RUN rm -rf flat
 
