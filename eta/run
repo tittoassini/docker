@@ -1,0 +1,3 @@
+#!/bin/bash
+docker run -it typelead/eta git clone https://github.com/Quid2/flat;cd flat;etlas update;etlas test
+
