@@ -15,7 +15,7 @@ RUN cabal update
 RUN git clone https://github.com/Quid2/flat
 
 # FAILS: cannot compile some dependencies
-RUN cd flat;cabal install --only-dependencies
+RUN cd flat;cabal install
 
 RUN cd flat;cabal install --only-dependencies --enable-tests
 
