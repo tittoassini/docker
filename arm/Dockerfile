@@ -19,6 +19,10 @@ RUN cd flat;cabal install
 
 RUN cd flat;cabal -j install --enable-tests
 
+ARG CACHE_DATE=NOW
+
+RUN uname -a;ghc --version;cabal --version
+
 RUN cd flat;cabal test
 
 # RUN rm -rf flat
@@ -27,6 +31,5 @@ RUN cd flat;cabal test
 
 # RUN git clone https://github.com/Quid2/flat;cd flat;cabal install --only-dependencies --enable-tests;cabal test
 
-RUN uname -a;ghc --version;cabal --version
 
 #RUN [ "cross-build-end" ]
