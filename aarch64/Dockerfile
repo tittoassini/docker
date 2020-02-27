@@ -31,8 +31,7 @@ RUN rm -rf flat
 
 # RUN cd flat;cabal test
 
-# RUN uname -a;ghc --version;cabal --version
+RUN uname -a;ghc --version;cabal --version
 
-RUN [ "cross-build-end" ]
+# RUN [ "cross-build-end" ]
 
-# Questo venerdi dovrebbe andare a vedere la casa un'altra persona interessata, tramite un'altra agenzia, quindi vogliamo aspettare qualche giorno prima di prendere una decisione.
