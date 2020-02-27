@@ -21,9 +21,11 @@ RUN cd flat;cabal install --enable-tests
 
 RUN cd flat;cabal test
 
-RUN rm -rf flat
+ARG CACHE_DATE
 
-# ARG CACHE_DATE
+RUN cd flat;cabal test
+
+RUN uname -a;ghc --version;cabal --version
 
 # RUN git clone https://github.com/Quid2/flat
 
