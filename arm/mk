@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build -t quid2/armv7hf .
+docker build --build-arg CACHE_DATE="$(date)" -t quid2/armv7hf .
 docker push quid2/armv7hf
