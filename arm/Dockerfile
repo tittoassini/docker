@@ -20,11 +20,13 @@ RUN git clone https://github.com/Quid2/flat
 # If we build in two stages (lib, then tests we end up recompiling a number of packages)
 RUN cd flat;cabal install --enable-tests
 
-ARG CACHE_DATE=NOW
+RUN cd flat;cabal test
 
-RUN uname -a;ghc --version;cabal --version
+ARG CACHE_DATE
 
 RUN cd flat;cabal test
+
+RUN uname -a;ghc --version;cabal --version
 
 # RUN rm -rf flat
 
