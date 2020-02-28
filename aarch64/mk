@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build -t quid2/aarch64 .
+docker build --build-arg CACHE_DATE="$(date)" -t quid2/aarch64 .
 docker push quid2/aarch64
