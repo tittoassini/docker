@@ -33,7 +33,7 @@ RUN uname -a;ghc --version;cabal --version
 
 # RUN cd flat;cabal test
 
-RUN uname -a;ghc --version;cabal --version
+# RUN uname -a;ghc --version;cabal --version
 
 # RUN [ "cross-build-end" ]
 
