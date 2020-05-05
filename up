@@ -5,7 +5,7 @@
 git commit -am "fix";git push
 ssh root@mega.quid2.org 'cd docker;git pull'
 ssh root@mega.quid2.org 'df -h'
-#ssh root@mega.quid2.org 'df -h;docker system prune;df -h'
+#mega 'df -h;docker system prune;df -h'
 
 # update basic stack image
 #ssh root@mega.quid2.org "cd docker/stack;./mk"
