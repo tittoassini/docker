@@ -1,7 +1,7 @@
 #! /bin/bash
 # ./up lts-14.27
 # ./up nightly-2020-01-25
-# ./up lts-15.4
+# ./up lts-15.11
 git commit -am "fix";git push
 ssh root@mega.quid2.org 'cd docker;git pull'
 ssh root@mega.quid2.org 'df -h'
