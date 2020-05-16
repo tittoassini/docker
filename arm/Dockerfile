@@ -12,6 +12,7 @@ RUN apt-get update;apt-get -y upgrade
 
 RUN apt-get install -y git ghc cabal-install
 
+ARG CACHE_DATE
 RUN cabal update
 
 RUN git clone https://github.com/Quid2/flat
