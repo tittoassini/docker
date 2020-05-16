@@ -12,6 +12,9 @@ RUN apt-get update;apt-get -y upgrade
 
 RUN apt-get install -y git ghc cabal-install
 
+# uncomment this when ypu get a cabal update warning
+ARG CACHE_DATE
+
 RUN cabal update
 
 RUN git clone https://github.com/Quid2/flat
@@ -24,8 +27,6 @@ RUN cd flat;cabal install --enable-tests
 RUN cd flat;cabal test
 
 ARG CACHE_DATE
-
-RUN cabal update
 
 RUN rm -rf flat
 
