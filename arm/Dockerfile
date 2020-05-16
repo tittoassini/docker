@@ -1,4 +1,5 @@
 # docker build -t quid2/armv7l-ubuntu-cabal . 
+# run tests
 # docker build  --build-arg CACHE_DATE="$(date)" -t quid2/armv7l-ubuntu-cabal . 
 FROM balenalib/armv7hf-ubuntu:20200221
 
@@ -26,11 +27,12 @@ ARG CACHE_DATE
 
 RUN uname -a;ghc --version;cabal --version
 
+RUN cabal update
+
 RUN rm -rf flat
 
-ARG CACHE_DATE=NOW
+# ARG CACHE_DATE=NOW
 
 RUN git clone https://github.com/Quid2/flat;cd flat;cabal install --only-dependencies --enable-tests;cabal test
-
 
 RUN [ "cross-build-end" ]
