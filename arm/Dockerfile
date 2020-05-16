@@ -25,8 +25,6 @@ RUN cd flat;cabal test
 
 ARG CACHE_DATE
 
-RUN uname -a;ghc --version;cabal --version
-
 RUN cabal update
 
 RUN rm -rf flat
@@ -34,5 +32,7 @@ RUN rm -rf flat
 # ARG CACHE_DATE=NOW
 
 RUN git clone https://github.com/Quid2/flat;cd flat;cabal install --only-dependencies --enable-tests;cabal test
+
+RUN uname -a;ghc --version;cabal --version
 
 RUN [ "cross-build-end" ]
