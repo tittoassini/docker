@@ -1,7 +1,7 @@
 # docker build -t quid2/armv7l-ubuntu-cabal . 
 # run tests
 # docker build  --build-arg CACHE_DATE="$(date)" -t quid2/armv7l-ubuntu-cabal . 
-FROM balenalib/armv7hf-ubuntu:20200221
+FROM balenalib/armv7hf-ubuntu:20200502
 
 MAINTAINER Titto Assini <tittoassini@gmail.com>
 
