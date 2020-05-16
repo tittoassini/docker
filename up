@@ -10,13 +10,13 @@ ssh root@mega.quid2.org 'df -h'
 # update basic stack image
 #ssh root@mega.quid2.org "cd docker/stack;./mk"
 
-ssh root@mega.quid2.org "cd docker/stack/lts;./mk $1"
+# mega "cd docker/stack/lts;./mk $1"
 
 #ssh root@mega.quid2.org "cd docker/386;./mk"
 #ssh root@mega.quid2.org "cd docker/eta;./mk"
 
 #ssh root@mega.quid2.org "cd docker/arm;./mk"
-#ssh root@mega.quid2.org "cd docker/aarch64;./mk"
+ssh root@mega.quid2.org "cd docker/aarch64;./mk"
 
 #ssh root@mega.quid2.org "cd docker/aarch64;docker build -t quid2/aarch64-ubuntu-cabal ."
 

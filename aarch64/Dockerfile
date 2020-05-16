@@ -1,5 +1,5 @@
 # docker build -t quid2/aarch64-ubuntu-cabal . 
-# docker build  --build-arg CACHE_DATE="$(date)" -t quid2/armv7l-ubuntu-cabal . 
+# docker build  --build-arg CACHE_DATE="$(date)" -t quid2/aarch64-ubuntu-cabal . 
 FROM balenalib/aarch64-ubuntu:20200221
 MAINTAINER Titto Assini <tittoassini@gmail.com>
 
