@@ -24,15 +24,13 @@ RUN cd flat;cabal test
 
 ARG CACHE_DATE
 
-RUN cd flat;cabal test
-
 RUN uname -a;ghc --version;cabal --version
 
-# RUN rm -rf flat
+RUN rm -rf flat
 
-# ARG CACHE_DATE=NOW
+ARG CACHE_DATE=NOW
 
-# RUN git clone https://github.com/Quid2/flat;cd flat;cabal install --only-dependencies --enable-tests;cabal test
+RUN git clone https://github.com/Quid2/flat;cd flat;cabal install --only-dependencies --enable-tests;cabal test
 
 
-#RUN [ "cross-build-end" ]
+RUN [ "cross-build-end" ]

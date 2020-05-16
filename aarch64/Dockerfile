@@ -27,13 +27,13 @@ RUN cd flat;cabal test
 
 RUN uname -a;ghc --version;cabal --version
 
-# RUN git clone https://github.com/Quid2/flat
+RUN git clone https://github.com/Quid2/flat
 
-# RUN cd flat;cabal install --only-dependencies --enable-tests
+RUN cd flat;cabal install --only-dependencies --enable-tests
 
-# RUN cd flat;cabal test
+RUN cd flat;cabal test
 
-# RUN uname -a;ghc --version;cabal --version
+RUN uname -a;ghc --version;cabal --version
 
-# RUN [ "cross-build-end" ]
+RUN [ "cross-build-end" ]
 
