@@ -14,7 +14,7 @@ RUN cd flat;cabal --ghcjs new-build --dependencies-only
 
 RUN cd flat;cabal --ghcjs new-build
 
-RUN cd flat;git pull;cabal --ghcjs new-test spec
+RUN cd flat;cabal --ghcjs new-test
 
 RUN rm -r flat
 
