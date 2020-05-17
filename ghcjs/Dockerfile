@@ -8,8 +8,6 @@ RUN cabal update;cabal install cabal-install
 RUN which cabal
 RUN cabal --version
 
-ENV PATH=/root/.cabal:$PATH
-
 RUN git clone https://github.com/Quid2/flat
 
 RUN cd flat;cabal --ghcjs new-build --dependencies-only
@@ -24,6 +22,8 @@ RUN cabal --version;ghcjs --version
 
 # increase to bust cache
 ARG CACHEBUST=1 
+
+# ENV PATH=/root/.cabal:$PATH
 
 # uncomment to update  
 # RUN cd flat;git pull;cabal --ghcjs new-test spec
