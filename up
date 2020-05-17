@@ -4,7 +4,7 @@
 # ./up lts-15.11
 git commit -am "fix";git push
 ssh root@mega.quid2.org 'cd docker;git pull'
-ssh root@mega.quid2.org 'df -h | grep "/dev/md1'
+ssh root@mega.quid2.org "df -h | grep '/dev/md1'"
 #mega 'df -h;docker system prune;df -h'
 
 # update basic stack image
