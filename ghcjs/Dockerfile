@@ -21,7 +21,7 @@ RUN cd flat;cabal --ghcjs new-test doc-static --constraint "tasty -clock"
 RUN cd flat;cabal --ghcjs new-test spec --constraint "tasty -clock"
 
 # RUN cd flat;cabal --ghcjs new-build;cabal cabal --ghcjs new-test doc-static --constraint "tasty -clock"
-
+#           /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe
 # RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe
 
 ARG CACHE_DATE
