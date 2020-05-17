@@ -17,6 +17,8 @@ RUN git clone https://github.com/Quid2/flat
 # RUN cd flat;cabal --ghcjs new-build --dependencies-only 
 RUN cd flat;cabal --ghcjs new-build --enable-tests
 
+RUN ls /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/
+
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe
 
 # RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/spec/build/spec/spec.jsexe
