@@ -22,7 +22,9 @@ RUN git clone https://github.com/Quid2/flat
 # RUN cd flat;cabal install
 
 # If we build in two stages (lib, then tests we end up recompiling a number of packages)
-RUN cd flat;cabal install --enable-tests
+RUN cd flat;cabal install --only-dependencies --enable-tests
+
+RUN cd flat;cabal build
 
 RUN cd flat;cabal test
 

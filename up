@@ -15,8 +15,8 @@ ssh root@mega.quid2.org 'df -h'
 #ssh root@mega.quid2.org "cd docker/386;./mk"
 #ssh root@mega.quid2.org "cd docker/eta;./mk"
 
-ssh root@mega.quid2.org "cd docker/arm;./mk armv7hf"
-ssh root@mega.quid2.org "cd docker/arm;./mk aarch64"
+# ssh root@mega.quid2.org "cd docker/arm;./mk armv7hf"
+# ssh root@mega.quid2.org "cd docker/arm;./mk aarch64"
 
 # OLD
 # ssh root@mega.quid2.org "cd docker/aarch64;./mk"
