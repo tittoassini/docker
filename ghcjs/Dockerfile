@@ -10,7 +10,7 @@ RUN cabal --version
 
 RUN git clone https://github.com/Quid2/flat;
 
-RUN cd flat;cabal --ghcjs new-build --enable-tests
+RUN cd flat;cabal --ghcjs new-build --enable-tests --constraint "tasty -clock"
 
 RUN rm -r flat
 
