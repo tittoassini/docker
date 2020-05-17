@@ -18,12 +18,12 @@ ARG VER
 
 ENV PATH=/root/.stack/programs/x86_64-linux/$VER/bin:$PATH
 
+# RUN which cabal
+# RUN cabal --version
+# RUN cabal update;cabal install cabal-install
+# RUN which cabal
+# RUN cabal --version
+
 RUN git clone https://github.com/Quid2/flat
 RUN cd flat;stack test --dependencies-only --stack-yaml stack-ghcjs-$STK.yaml
 RUN rm -rf flat
-
-RUN which cabal
-RUN cabal --version
-RUN cabal update;cabal install cabal-install
-RUN which cabal
-RUN cabal --version
