@@ -17,23 +17,27 @@ RUN git clone https://github.com/Quid2/flat
 # RUN cd flat;cabal --ghcjs new-build --dependencies-only 
 RUN cd flat;cabal --ghcjs new-build --enable-tests
 
-RUN cd flat;cabal --ghcjs new-test doc-static --constraint "tasty -clock"
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe
 
-RUN cd flat;cabal --ghcjs new-test spec --constraint "tasty -clock"
+# RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/spec/build/spec/spec.jsexe
+
+
+# RUN cd flat;cabal --ghcjs new-test doc-static --constraint "tasty -clock"
+
+# RUN cd flat;cabal --ghcjs new-test spec --constraint "tasty -clock"
 
 # RUN cd flat;cabal --ghcjs new-build;cabal cabal --ghcjs new-test doc-static --constraint "tasty -clock"
 #           /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe
 # 
 
-ARG CACHE_DATE
+# ARG CACHE_DATE
 
 
-RUN rm -r flat
+# RUN rm -r flat
 
-RUN cabal --version;ghcjs --version
+# RUN cabal --version;ghcjs --version
 
-ARG CACHE_DATE
+# ARG CACHE_DATE
 
 
 # ENV PATH=/root/.cabal:$PATH
