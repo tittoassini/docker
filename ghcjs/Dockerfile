@@ -10,18 +10,24 @@ RUN cabal --version
 
 RUN git clone https://github.com/Quid2/flat
 
+RUN cabal --configure --ghcjs
+
+RUN cabal test
+
 RUN cd flat;cabal --ghcjs new-build --dependencies-only
 
 RUN cd flat;cabal --ghcjs new-build
 
 RUN cd flat;cabal --ghcjs new-test
 
+RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe
+
 RUN rm -r flat
 
 RUN cabal --version;ghcjs --version
 
-# increase to bust cache
-ARG CACHEBUST=1 
+ARG CACHE_DATE
+
 
 # ENV PATH=/root/.cabal:$PATH
 
