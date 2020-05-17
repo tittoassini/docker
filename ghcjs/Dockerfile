@@ -8,7 +8,11 @@ RUN cabal update;cabal install cabal-install
 RUN which cabal
 RUN cabal --version
 
+ARG CACHE_DATE
+
 RUN git clone https://github.com/Quid2/flat
+
+RUN cabal new-test test  --project-file cabal.project.ghcjs
 
 RUN cabal --configure --ghcjs
 
