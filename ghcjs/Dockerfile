@@ -12,7 +12,7 @@ ARG CACHE_DATE
 
 RUN git clone https://github.com/Quid2/flat
 
-RUN cabal new-test doc-static --project-file cabal.project.ghcjs
+RUN cabal new-test --project-file cabal.project.ghcjs
 
 RUN cabal --configure --ghcjs
 
