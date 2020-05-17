@@ -12,17 +12,10 @@ ssh root@mega.quid2.org 'df -h'
 
 # mega "cd docker/stack/lts;./mk $1"
 
-#ssh root@mega.quid2.org "cd docker/386;./mk"
+#mega "cd docker/386;./mk"
 #ssh root@mega.quid2.org "cd docker/eta;./mk"
 
 # ssh root@mega.quid2.org "cd docker/arm;./mk armv7hf"
 # ssh root@mega.quid2.org "cd docker/arm;./mk aarch64"
 
-# OLD
-# ssh root@mega.quid2.org "cd docker/aarch64;./mk"
-
-#ssh root@mega.quid2.org "cd docker/aarch64;docker build -t quid2/aarch64-ubuntu-cabal ."
-
-# docker build -t quid2/aarch64-ubuntu-cabal . 
-# docker build  --build-arg CACHE_DATE="$(date)" -t quid2/armv7l-ubuntu-cabal . 
-
+mega "cd docker/ghcjs;./mk $1"
