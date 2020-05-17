@@ -11,14 +11,15 @@ RUN cabal --version
 RUN git clone https://github.com/Quid2/flat
 
 #RUN cd flat;cabal new-test --project-file cabal.project.ghcjs
-
 #RUN cd flat;cabal --ghcjs new-build;cabal cabal --ghcjs new-test doc-static --constraint "tasty -clock"
 #RUN cabal --configure --ghcjs
 
-RUN cd flat;cabal --ghcjs new-build --dependencies-only
-RUN cd flat;cabal --ghcjs new-build
+# RUN cd flat;cabal --ghcjs new-build --dependencies-only 
+RUN cd flat;cabal --ghcjs new-build --enable-tests
+
 RUN cd flat;cabal --ghcjs new-test doc-static --constraint "tasty -clock"
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe
+
 RUN cd flat;cabal --ghcjs new-test spec --constraint "tasty -clock"
 
 # RUN cd flat;cabal --ghcjs new-build;cabal cabal --ghcjs new-test doc-static --constraint "tasty -clock"
