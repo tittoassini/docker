@@ -8,7 +8,6 @@ RUN cabal update;cabal install cabal-install
 RUN which cabal
 RUN cabal --version
 
-ARG CACHE_DATE
 
 RUN git clone https://github.com/Quid2/flat
 
@@ -22,6 +21,9 @@ RUN cd flat;cabal --ghcjs new-build
 RUN cd flat;cabal --ghcjs new-test
 
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe
+
+ARG CACHE_DATE
+
 
 RUN rm -r flat
 
