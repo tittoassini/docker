@@ -16,6 +16,6 @@ ssh root@mega.quid2.org "df -h | grep '/dev/md1'"
 #ssh root@mega.quid2.org "cd docker/eta;./mk"
 
 # ssh root@mega.quid2.org "cd docker/arm;./mk armv7hf"
-#ssh root@mega.quid2.org "cd docker/arm;./mk aarch64"
+ssh root@mega.quid2.org "cd docker/arm;./mk aarch64"
 
 #mega "cd docker/ghcjs;./mk"
