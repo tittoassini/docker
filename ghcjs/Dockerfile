@@ -18,7 +18,7 @@ ARG CACHE_DATE
 
 RUN cabal --version;ghcjs --version;pwd
 
-# RUN git clone https://github.com/Quid2/flat;cd flat;cabal --ghcjs new-build --enable-tests;node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe/all.js;node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/spec/build/spec/spec.jsexe/all.js
+# RUN git clone https://github.com/Quid2/flat;cd flat;cabal --ghcjs new-build --enable-tests;node dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe/all.js;node dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/spec/build/spec/spec.jsexe/all.js
 
 
 #RUN cd flat;cabal new-test --project-file cabal.project.ghcjs

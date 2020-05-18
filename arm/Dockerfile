@@ -28,9 +28,15 @@ RUN cd flat;cabal test
 RUN rm -rf flat
 
 ARG CACHE_DATE
-# ARG CACHE_DATE=NOW
 
-RUN git clone https://github.com/Quid2/flat;cd flat;cabal install --only-dependencies --enable-tests;cabal test
+RUN git clone https://github.com/Quid2/flat
+
+# If we build in two stages (lib, then tests we end up recompiling a number of packages)
+RUN cd flat;cabal install --only-dependencies --enable-tests
+
+RUN cd flat;cabal build
+
+RUN cd flat;cabal test
 
 RUN uname -a;ghc --version;cabal --version
 
