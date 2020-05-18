@@ -31,6 +31,8 @@ ARG CACHE_DATE
 
 RUN git clone https://github.com/Quid2/flat
 
+RUN cd flat;cabal configure --disable-optimization --ghc-options="-j +RTS -A128m -n2m -s -RTS"
+
 # If we build in two stages (lib, then tests we end up recompiling a number of packages)
 RUN cd flat;cabal install --only-dependencies --enable-tests
 
