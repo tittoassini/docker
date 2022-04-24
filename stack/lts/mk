@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build --build-arg STK=$1 -t quid2/x64-ubuntu-stack-$1 .
-docker push quid2/x64-ubuntu-stack-$1
+sudo docker build --build-arg STK=$1 -t quid2/x64-ubuntu-stack-$1 .
+sudo docker push quid2/x64-ubuntu-stack-$1
