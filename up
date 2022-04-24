@@ -3,19 +3,19 @@
 # ./up nightly-2020-01-25
 # ./up lts-15.11
 git commit -am "fix";git push
-ssh root@mega.quid2.org 'cd docker;git pull'
-ssh root@mega.quid2.org "df -h | grep '/dev/md1'"
-#mega 'df -h;docker system prune;df -h'
+ssh root@vip.quid2.org 'cd docker;git pull'
+ssh root@vip.quid2.org "df -h | grep '/dev/md1'"
+#vip 'df -h;docker system prune;df -h'
 
 # update basic stack image
-#ssh root@mega.quid2.org "cd docker/stack;./mk"
+#ssh root@vip.quid2.org "cd docker/stack;./mk"
 
-# mega "cd docker/stack/lts;./mk $1"
+vip "cd docker/stack/lts;./mk $1"
 
-#mega "cd docker/386;./mk"
-#ssh root@mega.quid2.org "cd docker/eta;./mk"
+#vip "cd docker/386;./mk"
+#ssh root@vip.quid2.org "cd docker/eta;./mk"
 
-# ssh root@mega.quid2.org "cd docker/arm;./mk armv7hf"
-ssh root@mega.quid2.org "cd docker/arm;./mk aarch64"
+# ssh root@vip.quid2.org "cd docker/arm;./mk armv7hf"
+# ssh root@vip.quid2.org "cd docker/arm;./mk aarch64"
 
-#mega "cd docker/ghcjs;./mk"
+#vip "cd docker/ghcjs;./mk"
