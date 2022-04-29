@@ -17,6 +17,10 @@ RUN mkdir /root/ghcup; curl https://downloads.haskell.org/~ghcup/x86_64-linux-gh
 
 RUN ghcup install cabal
 
+RUN ls -la /root/ghcup
+
+RUN ghcup list
+
 # RUN cabal install cabal-install
 RUN which cabal
 RUN cabal --version
