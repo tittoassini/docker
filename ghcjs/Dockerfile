@@ -13,7 +13,7 @@ RUN apt-get install -y build-essential curl libffi-dev libffi6 libgmp-dev libgmp
 
 ENV PATH=/root/.ghcup/bin:/root/.cabal/bin:$PATH
 
-RUN mkdir -r /root/.ghcup/bin; curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup --output /root/.ghcup/bin/ghcup;chmod u+x /root/.ghcup/bin/ghcup
+RUN mkdir -p /root/.ghcup/bin; curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup --output /root/.ghcup/bin/ghcup;chmod u+x /root/.ghcup/bin/ghcup
 
 RUN ghcup install cabal
 
@@ -22,9 +22,9 @@ RUN ghcup list
 RUN which cabal
 RUN cabal --version
 
-# RUN git clone https://github.com/Quid2/flat;
+RUN git clone https://github.com/Quid2/flat;
 
-#RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
+RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
 
 #RUN rm -r flat
