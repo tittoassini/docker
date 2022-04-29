@@ -22,13 +22,14 @@ RUN ghcup list
 RUN which cabal
 RUN cabal --version
 
+ARG CACHE_DATE
+
 RUN git clone https://github.com/Quid2/flat;
 
 RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
 #RUN rm -r flat
 
-ARG CACHE_DATE
 
 RUN cabal --version
 
