@@ -33,9 +33,6 @@ RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:
 
 RUN cd flat;cabal --ghcjs test flat:repr
 
-# /opt/flat/dist-newstyle/build/x86_64-linux/ghcj
-epr.jsexe                        
-
 RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:doc-static
 
 # RUN cd flat;cabal test --ghcjs --constraint "tasty -clock"  flat:repr
