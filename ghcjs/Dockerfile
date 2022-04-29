@@ -29,10 +29,10 @@ RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
 RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:repr
 
-RUN cd flat;cabal test flat:repr
+RUN cd flat;cabal --ghcjs test flat:repr
 
 
-RUN cd flat;cabal test --enable-tests --ghcjs --constraint "tasty -clock" flat:doc-static
+RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:doc-static
 
 # RUN cd flat;cabal test --ghcjs --constraint "tasty -clock"  flat:repr
 
