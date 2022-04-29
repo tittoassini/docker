@@ -9,7 +9,7 @@ RUN ghc --version
 
 RUN cabal update
 
-RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+RUN curl -k --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
 RUN ghcup install cabal
 
@@ -21,8 +21,6 @@ RUN cabal --version
 
 #RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
-# sudo docker run -it quid2/ghcjs
-# --enable-tests
 
 #RUN rm -r flat
 
