@@ -16,25 +16,23 @@ ENV PATH=/root/.ghcup/bin:/root/.cabal/bin:$PATH
 RUN mkdir -p /root/.ghcup/bin; curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup --output /root/.ghcup/bin/ghcup;chmod u+x /root/.ghcup/bin/ghcup
 
 RUN ghcup install cabal
-
 RUN ghcup list
-
 RUN which cabal
+
 RUN cabal --version
+RUN ghcjs --version
+RUN ghc --version
 
 RUN git clone https://github.com/Quid2/flat;
 
 RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
-ARG CACHE_DATE
-
 RUN cabal --ghcjs --constraint "tasty -clock" test flat:doc-static
 
 #RUN rm -r flat
 
-RUN cabal --version
+ARG CACHE_DATE
 
-# RUN ghcjs --version
 
 # RUN pwd
 
