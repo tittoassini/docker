@@ -7,15 +7,20 @@ RUN cabal --version
 
 RUN ghc --version
 
-# RUN cabal update;cabal install cabal-install
+RUN cabal update
+
+# RUN cabal install cabal-install
 # RUN which cabal
 # RUN cabal --version
 
 RUN git clone https://github.com/Quid2/flat;
 
-RUN cd flat;cabal --ghcjs new-build --enable-tests --constraint "tasty -clock"
+#RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
-RUN rm -r flat
+# sudo docker run -it quid2/ghcjs
+# --enable-tests
+
+#RUN rm -r flat
 
 ARG CACHE_DATE
 
