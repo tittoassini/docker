@@ -9,11 +9,13 @@ RUN ghc --version
 
 RUN cabal update
 
+RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
 # RUN cabal install cabal-install
 # RUN which cabal
 # RUN cabal --version
 
-RUN git clone https://github.com/Quid2/flat;
+# RUN git clone https://github.com/Quid2/flat;
 
 #RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
@@ -24,7 +26,11 @@ RUN git clone https://github.com/Quid2/flat;
 
 ARG CACHE_DATE
 
-RUN cabal --version;ghcjs --version;pwd
+RUN cabal --version
+
+# RUN ghcjs --version
+
+# RUN pwd
 
 # RUN git clone https://github.com/Quid2/flat;cd flat;cabal --ghcjs new-build --enable-tests;node dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/doc-static/build/doc-static/doc-static.jsexe/all.js;node dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4/t/spec/build/spec/spec.jsexe/all.js
 
