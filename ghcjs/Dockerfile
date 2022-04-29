@@ -11,9 +11,11 @@ RUN cabal update
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
+RUN ghcup install cabal
+
 # RUN cabal install cabal-install
-# RUN which cabal
-# RUN cabal --version
+RUN which cabal
+RUN cabal --version
 
 # RUN git clone https://github.com/Quid2/flat;
 
