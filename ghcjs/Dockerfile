@@ -29,6 +29,8 @@ RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
 RUN apt-get install nodejs
 
+ARG CACHE_DATE
+
 RUN cd flat;git pull
 
 RUN cd flat;cp cabal.project.ghcjs cabal.project;ls .;cabal build
