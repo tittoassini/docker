@@ -29,9 +29,11 @@ RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
 RUN apt-get install nodejs
 
-RUN cd flat;cabal build
+RUN cd flat;git pull
 
 RUN cd flat;cp cabal.project.ghcjs cabal.project
+
+RUN cd flat;cabal build
 
 RUN cd flat;cabal build --enable-tests flat:doc-static
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/doc-static/build/doc-static/doc-static.jsexe/all.js
