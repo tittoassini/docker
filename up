@@ -3,20 +3,20 @@
 # ./up nightly-2020-01-25
 # ./up lts-15.11
 git commit -am "fix";git push
-nano "git clone https://github.com/tittoassini/docker"
-ssh ubuntu@nano.quid2.org 'cd docker;git pull'
-ssh ubuntu@nano.quid2.org "df -h | grep '/dev/md1'"
+# nano "git clone https://github.com/tittoassini/docker"
+nano 'cd docker;git pull'
+nano "df -h | grep '/dev/md1'"
 #nano 'df -h;sudo docker system prune;df -h'
 
 # update basic stack image
-#ssh ubuntu@nano.quid2.org "cd docker/stack;./mk"
+#nano "cd docker/stack;./mk"
 
 nano "cd docker/stack/lts;./mk $1"
 
 #nano "cd docker/386;./mk"
-#ssh ubuntu@nano.quid2.org "cd docker/eta;./mk"
+#nano "cd docker/eta;./mk"
 
-# ssh ubuntu@nano.quid2.org "cd docker/arm;./mk armv7hf"
-# ssh ubuntu@nano.quid2.org "cd docker/arm;./mk aarch64"
+# nano "cd docker/arm;./mk armv7hf"
+# nano "cd docker/arm;./mk aarch64"
 
 #nano "cd docker/ghcjs;./mk"
