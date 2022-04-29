@@ -26,7 +26,6 @@ RUN git clone https://github.com/Quid2/flat;
 
 RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
-
 #RUN rm -r flat
 
 ARG CACHE_DATE

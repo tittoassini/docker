@@ -1,4 +1,4 @@
 #!/bin/bash
 NAME=quid2/ghcjs-8.4.0.1
 sudo docker build --build-arg CACHE_DATE="$(date)" -t $NAME .
-# sudo docker push $NAME
+sudo docker push $NAME
