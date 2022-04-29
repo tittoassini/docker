@@ -11,17 +11,14 @@ RUN cabal update
 
 RUN apt-get install -y build-essential curl libffi-dev libffi6 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
 
-ENV PATH=/root/ghcup:/root/.cabal/bin:$PATH
+ENV PATH=/root/.ghcup/bin:/root/.cabal/bin:$PATH
 
-RUN mkdir /root/ghcup; curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup --output /root/ghcup/ghcup;chmod u+x /root/ghcup/ghcup
+RUN mkdir -r /root/.ghcup/bin; curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup --output /root/.ghcup/bin/ghcup;chmod u+x /root/.ghcup/bin/ghcup
 
 RUN ghcup install cabal
 
-RUN ls -la /root/ghcup
-
 RUN ghcup list
 
-# RUN cabal install cabal-install
 RUN which cabal
 RUN cabal --version
 
