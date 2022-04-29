@@ -27,10 +27,14 @@ RUN git clone https://github.com/Quid2/flat;
 
 RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
+RUN sudo apt install nodejs
+
 RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:repr
 
 RUN cd flat;cabal --ghcjs test flat:repr
 
+# /opt/flat/dist-newstyle/build/x86_64-linux/ghcj
+epr.jsexe                        
 
 RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:doc-static
 
