@@ -9,7 +9,11 @@ RUN ghc --version
 
 RUN cabal update
 
-RUN curl -k --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+RUN apt-get install -y build-essential curl libffi-dev libffi6 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
+
+ENV PATH=/root/ghcup:/root/.cabal/bin:$PATH
+
+RUN mkdir /root/ghcup; curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup --output /root/ghcup;chmod u+x /root/ghcup
 
 RUN ghcup install cabal
 
