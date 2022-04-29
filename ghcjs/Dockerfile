@@ -27,7 +27,7 @@ RUN git clone https://github.com/Quid2/flat;
 
 RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
-RUN cd flat;cabal test --ghcjs --constraint "tasty -clock"  flat:repr
+RUN cd flat;cabal install --ghcjs --constraint "tasty -clock"  flat:repr
 
 RUN cd flat;cabal --ghcjs --constraint "tasty -clock" test flat:ghcjs-cons
 
