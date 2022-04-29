@@ -3,19 +3,19 @@
 # ./up nightly-2020-01-25
 # ./up lts-15.11
 git commit -am "fix";git push
-ssh ubuntu@vip.quid2.org 'cd docker;git pull'
-ssh ubuntu@vip.quid2.org "df -h | grep '/dev/md1'"
-#vip 'df -h;docker system prune;df -h'
+ssh ubuntu@nano.quid2.org 'cd docker;git pull'
+ssh ubuntu@nano.quid2.org "df -h | grep '/dev/md1'"
+#nano 'df -h;docker system prune;df -h'
 
 # update basic stack image
-#ssh ubuntu@vip.quid2.org "cd docker/stack;./mk"
+#ssh ubuntu@nano.quid2.org "cd docker/stack;./mk"
 
-vip "cd docker/stack/lts;./mk $1"
+nano "cd docker/stack/lts;./mk $1"
 
-#vip "cd docker/386;./mk"
-#ssh ubuntu@vip.quid2.org "cd docker/eta;./mk"
+#nano "cd docker/386;./mk"
+#ssh ubuntu@nano.quid2.org "cd docker/eta;./mk"
 
-# ssh ubuntu@vip.quid2.org "cd docker/arm;./mk armv7hf"
-# ssh ubuntu@vip.quid2.org "cd docker/arm;./mk aarch64"
+# ssh ubuntu@nano.quid2.org "cd docker/arm;./mk armv7hf"
+# ssh ubuntu@nano.quid2.org "cd docker/arm;./mk aarch64"
 
-#vip "cd docker/ghcjs;./mk"
+#nano "cd docker/ghcjs;./mk"
