@@ -8,10 +8,12 @@ nano 'cd docker;git pull'
 nano "df -h | grep '/dev/md1'"
 #nano 'df -h;sudo docker system prune;df -h'
 
+#nano "cd docker/stack;./mk"
+
 # update basic stack image
 #nano "cd docker/stack;./mk"
 
-nano "cd docker/stack/lts;./mk $1"
+# nano "cd docker/stack/lts;./mk $1"
 
 #nano "cd docker/386;./mk"
 #nano "cd docker/eta;./mk"
@@ -19,4 +21,4 @@ nano "cd docker/stack/lts;./mk $1"
 # nano "cd docker/arm;./mk armv7hf"
 # nano "cd docker/arm;./mk aarch64"
 
-#nano "cd docker/ghcjs;./mk"
+nano "cd docker/ghcjs;./mk"
