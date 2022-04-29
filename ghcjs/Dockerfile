@@ -4,6 +4,9 @@ RUN cabal update
 
 RUN which cabal
 RUN cabal --version
+
+RUN ghc --version
+
 RUN cabal update;cabal install cabal-install
 RUN which cabal
 RUN cabal --version
