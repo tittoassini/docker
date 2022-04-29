@@ -31,7 +31,7 @@ RUN apt install nodejs
 
 RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:repr
 
-RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/repr/build/repr/repr.jsexe
+RUN ls -la  /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/repr/build/repr/repr.jsexe
 
 RUN cd flat;cabal --ghcjs test flat:repr
 
