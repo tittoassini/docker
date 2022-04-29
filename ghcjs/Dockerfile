@@ -31,7 +31,7 @@ RUN apt-get install nodejs
 
 RUN cd flat;git pull
 
-RUN cd flat;cp cabal.project.ghcjs cabal.project
+RUN cd flat;cp cabal.project.ghcjs cabal.project;ls .;cabal build
 
 RUN cd flat;cabal build
 
