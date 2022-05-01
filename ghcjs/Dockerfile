@@ -39,6 +39,8 @@ RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/d
 RUN cd flat;cabal build --enable-tests flat:repr
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/repr/build/repr/repr.jsexe/all.js
 
+ARG CACHE_DATE=0
+
 RUN echo $CACHE_DATE
 
 RUN cd flat;git pull;cp cabal.project.ghcjs cabal.project
@@ -51,7 +53,7 @@ RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/g
 
 # RUN cd flat;cabal --ghcjs new-build  --constraint "tasty -clock"
 
-ARG CACHE_DATE
+
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/doc-static/build/doc-static/doc-static.jsexe/all.js
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/ghcjs-cons/build/ghcjs-cons/ghcjs-cons.jsexe/all.js
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/repr/build/repr/repr.jsexe/all.js
