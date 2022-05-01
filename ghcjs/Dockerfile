@@ -39,18 +39,12 @@ RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/d
 RUN cd flat;cabal build --enable-tests flat:repr
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/repr/build/repr/repr.jsexe/all.js
 
-RUN cd flat;git pull;cp cabal.project.ghcjs cabal.project
-
-RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:ghcjs-cons
-RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/ghcjs-cons/build/ghcjs-cons/ghcjs-cons.jsexe/all.js
-
 RUN echo $CACHE_DATE
 
 RUN cd flat;git pull;cp cabal.project.ghcjs cabal.project
 
-RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:ghcjs-cons
+RUN cd flat;cabal build flat:ghcjs-cons
 RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/ghcjs-cons/build/ghcjs-cons/ghcjs-cons.jsexe/all.js
-
 
 # RUN cd flat;cabal build --enable-tests --ghcjs --constraint "tasty -clock" flat:spec
 # RUN node /opt/flat/dist-newstyle/build/x86_64-linux/ghcjs-8.4.0.1/flat-0.4.5/t/spec/build/spec/spec.jsexe/all.js
